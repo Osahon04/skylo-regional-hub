@@ -1,0 +1,16 @@
+variable "name" { type = string }
+variable "vpc_cidr" { type = string }
+variable "azs" { type = list(string) }
+
+variable "public_subnet_cidrs" { type = list(string) }
+variable "private_app_subnet_cidrs" { type = list(string) }
+variable "private_data_subnet_cidrs" { type = list(string) }
+variable "tgw_subnet_cidrs" { type = list(string) }
+variable "enable_dns_hostnames" {
+  type    = bool
+  default = true
+}
+variable "enable_dns_support" {
+  type    = bool
+  default = true
+}
